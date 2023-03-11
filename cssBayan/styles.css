@@ -27,8 +27,8 @@ main {
     transition: 1s all;
 }
 
-.container:hover .accordion-header .icon img {
-    visibility: visible;
+.container:hover .accordion-header .title {
+    text-decoration: underline;
 }
 
 .input-label {
@@ -72,8 +72,6 @@ main {
     background-color: cadetblue;
 }
 
-
-
 .input-label:active {
     opacity: 50%;
 }
@@ -100,7 +98,7 @@ main {
 
 .accordion-header .icon img {
     width: 1rem;
-    visibility: hidden;
+    visibility: visible;
     transform: rotate(45deg);
     transition: 0.2s all;
 }
@@ -118,8 +116,20 @@ main {
     transition: all 0.5s;
 }
 
+@media (hover: hover) {
+    .container:hover .accordion-header .icon img {
+        visibility: visible;
+    }
 
-@media screen and (max-width: 1920px) {
+    .accordion-header .icon img {
+        width: 1rem;
+        visibility: hidden;
+        transform: rotate(45deg);
+        transition: 0.2s all;
+    }
+}
+
+@media screen and (max-width: 120rem) {
     body {
         font-size: 1rem;
     }
@@ -128,7 +138,7 @@ main {
     }
 }
 
-@media screen and (max-width: 1180px) {
+@media screen and (max-width: 51.25rem) {
     body {
         font-size: 1.5rem;
     }
@@ -143,7 +153,7 @@ main {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 20rem) {
     body {
         font-size: 0.7rem;
     }
@@ -156,4 +166,9 @@ main {
     .radio-input:checked + .input-label .accordion-picture img {
         width: 100%;
     }
+
+    .accordion-header .icon img {
+        width: 0.6rem;
+    }
 }
+
