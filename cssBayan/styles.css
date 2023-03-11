@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+}
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    transition: 1s all;
+}
+
+.icon {
+    z-index: 1;
+    color: white;
+    transition: all 0.3s;
+}
+
+.container:hover .accordion-header .icon img {
+    visibility: visible;
+}
+
+.input-label {
+    padding: 0%;
+    z-index: 5;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.radio-input {
+    width: 0%;
+    height: 0%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.accordion {
+    margin-bottom: 1vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.accordion:hover .accordion-picture img {
+    width: 50%;
+}
+
+.accordion:hover .accordion-header .icon img {
+    transform: rotate(0deg);
+}
+
+.accordion:hover .accordion-header .title {
+    color: aliceblue;
+}
+
+.radio-input:checked + .input-label .accordion-picture img {
+    width: 50%;
+}
+
+.radio-input:checked + .input-label .accordion-header .icon img {
+    transform: rotate(0deg);
+}
+
+.radio-input:checked + .input-label {
+    /*box-shadow: 0vw 0vw 1vw rgba(28, 135, 83, 0.2);*/
+}
+
+.bayan-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.accordion-header {
+    background-color: burlywood;
+    border-radius: 1vw;
+    padding: 1% 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.accordion-header .title {
+
+}
+
+.accordion-header .icon img {
+    width: 1vw;
+    visibility: hidden;
+    transform: rotate(45deg);
+    transition: 0.2s all;
+}
+
+.accordion-picture {
+    padding-top: 1vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    transition: transform 0.5s;
+}
+
+.accordion-picture img {
+    width: 0%;
+    transition: all 0.5s;
+}
+
+
+@media screen and (max-width: 1920px) {
+    body {
+        font-size: 3vh;
+    }
+    .container {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    body {
+        font-size: 1rem;
+    }
+    .container {
+        width: 85%;
+    }
+    .accordion:hover .accordion-picture img {
+        width: 60%;
+    }
+
+    .radio-input:checked + .input-label .accordion-picture img {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body {
+        font-size: 2vh;
+    }
+    .container {
+        width: 95%;
+    }
+    .accordion:hover .accordion-picture img {
+        width: 100%;
+    }
+
+    .radio-input:checked + .input-label .accordion-picture img {
+        width: 100%;
+    }
+}
