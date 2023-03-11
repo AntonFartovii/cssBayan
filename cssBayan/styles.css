@@ -27,12 +27,6 @@ main {
     transition: 1s all;
 }
 
-.icon {
-    z-index: 1;
-    color: white;
-    transition: all 0.3s;
-}
-
 .container:hover .accordion-header .icon img {
     visibility: visible;
 }
@@ -60,11 +54,13 @@ main {
     flex-wrap: nowrap;
 }
 
-.accordion:hover .accordion-picture img {
+.accordion:hover .accordion-picture img,
+.radio-input:checked + .input-label .accordion-picture img {
     width: 50%;
 }
 
-.accordion:hover .accordion-header .icon img {
+.accordion:hover .accordion-header .icon img,
+.radio-input:checked + .input-label .accordion-header .icon img {
     transform: rotate(0deg);
 }
 
@@ -72,16 +68,14 @@ main {
     color: aliceblue;
 }
 
-.radio-input:checked + .input-label .accordion-picture img {
-    width: 50%;
+.radio-input:checked + .input-label .accordion-header {
+    background-color: cadetblue;
 }
 
-.radio-input:checked + .input-label .accordion-header .icon img {
-    transform: rotate(0deg);
-}
 
-.radio-input:checked + .input-label {
-    /*box-shadow: 0vw 0vw 1vw rgba(28, 135, 83, 0.2);*/
+
+.input-label:active {
+    opacity: 50%;
 }
 
 .bayan-box {
@@ -105,7 +99,7 @@ main {
 }
 
 .accordion-header .icon img {
-    width: 1vw;
+    width: 1rem;
     visibility: hidden;
     transform: rotate(45deg);
     transition: 0.2s all;
@@ -127,7 +121,7 @@ main {
 
 @media screen and (max-width: 1920px) {
     body {
-        font-size: 3vh;
+        font-size: 1rem;
     }
     .container {
         width: 75%;
@@ -136,31 +130,29 @@ main {
 
 @media screen and (max-width: 1180px) {
     body {
-        font-size: 1rem;
-    }
-    .container {
-        width: 85%;
-    }
-    .accordion:hover .accordion-picture img {
-        width: 60%;
+        font-size: 1.5rem;
     }
 
+    .container {
+        width: 90%;
+    }
+
+    .accordion:hover .accordion-picture img,
     .radio-input:checked + .input-label .accordion-picture img {
-        width: 60%;
+        width: 70%;
     }
 }
 
 @media screen and (max-width: 320px) {
     body {
-        font-size: 2vh;
+        font-size: 0.7rem;
     }
+
     .container {
         width: 95%;
     }
-    .accordion:hover .accordion-picture img {
-        width: 100%;
-    }
 
+    .accordion:hover .accordion-picture img,
     .radio-input:checked + .input-label .accordion-picture img {
         width: 100%;
     }
