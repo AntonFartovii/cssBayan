@@ -20,7 +20,7 @@ main {
 }
 
 .container {
-    margin: 0 auto;
+    margin: 0% auto;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -60,22 +60,12 @@ main {
     flex-wrap: nowrap;
 }
 
-.accordion:hover .accordion-picture img,
-.radio-input:checked + .input-label .accordion-picture img {
-    width: 50%;
-}
-
-.accordion:hover .accordion-header .icon img,
-.radio-input:checked + .input-label .accordion-header .icon img {
-    transform: rotate(0deg);
-}
-
 .radio-input:checked + .input-label .accordion-header {
     background-color: cadetblue;
 }
 
 .accordion-header {
-    background-color: burlywood;
+    background-color: #deb887bf;
     border-radius: 1vw;
     padding: 1% 1%;
     display: flex;
@@ -83,6 +73,7 @@ main {
     flex-wrap: nowrap;
     justify-content: space-between;
     transition: 0.5s all;
+    box-shadow: 0em 0em 0em burlywood;
 }
 
 .accordion-header .title {
@@ -113,6 +104,20 @@ main {
 
     .container:hover .accordion-header .title {
         opacity: 1;
+    }
+
+    .container:hover .accordion-header {
+        background-color: #deb887;
+    }
+
+    .accordion:hover .accordion-picture img,
+    .radio-input:checked + .input-label .accordion-picture img {
+        width: 50%;
+    }
+
+    .accordion:hover .accordion-header .icon img,
+    .radio-input:checked + .input-label .accordion-header .icon img {
+        transform: rotate(0deg);
     }
 
     .accordion-header .icon img {
@@ -150,9 +155,12 @@ main {
         width: 90%;
     }
 
-    .accordion:hover .accordion-picture img,
     .radio-input:checked + .input-label .accordion-picture img {
-        width: 70%;
+        width: 90%;
+    }
+
+    .radio-input:checked + .input-label .accordion-header .icon img {
+        transform: rotate(0deg);
     }
 }
 
@@ -165,9 +173,12 @@ main {
         width: 95%;
     }
 
-    .accordion:hover .accordion-picture img,
     .radio-input:checked + .input-label .accordion-picture img {
         width: 100%;
+    }
+
+    .radio-input:checked + .input-label .accordion-header .icon img {
+        transform: rotate(0deg);
     }
 
     .accordion-header .icon img {
