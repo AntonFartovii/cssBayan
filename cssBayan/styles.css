@@ -68,6 +68,9 @@ main {
 .radio-input:checked + .input-label .accordion-header {
     background-color: cadetblue;
 }
+.radio-input:checked + .input-label .accordion-header .title {
+    color: black;
+}
 
 .radio-input:checked + .input-label .accordion-header .icon img {
     transform: rotate(0deg);
@@ -86,7 +89,8 @@ main {
 }
 
 .accordion-header .title {
-    opacity: 0.7;
+    opacity: 1;
+    color: blueviolet;
 }
 
 .accordion-header .icon {
@@ -122,6 +126,7 @@ main {
 
     .container:hover .accordion-header .title {
         opacity: 1;
+        color: black;
     }
 
 
@@ -141,9 +146,6 @@ main {
         transition: 0.2s all;
     }
 
-    .accordion:hover .accordion-header .title {
-        color: aliceblue;
-    }
 
     .container:hover .accordion-header .icon img {
         visibility: visible;
