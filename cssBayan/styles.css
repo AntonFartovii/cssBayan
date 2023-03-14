@@ -51,6 +51,10 @@ main {
     opacity: 80%;
 }
 
+.input-label:active .accordion-header .title {
+    color: blueviolet;
+}
+
 .radio-input {
     width: 0%;
     height: 0%;
@@ -74,6 +78,10 @@ main {
 
 .radio-input:checked + .input-label .accordion-header .icon img {
     transform: rotate(0deg);
+}
+
+.radio-input:checked + .input-label .accordion-picture img {
+    width: 60%;
 }
 
 .accordion-header {
@@ -128,7 +136,6 @@ main {
         opacity: 1;
         color: black;
     }
-
 
     .accordion:hover .accordion-picture img,
     .radio-input:checked + .input-label .accordion-picture img {
